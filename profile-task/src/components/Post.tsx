@@ -29,7 +29,7 @@ const PostCard = () => {
   };
 
   return (
-    <Card>
+    <Card className="mx-3 lg:mx-16">
       {/* Card Header */}
       <CardActions disableSpacing>
         <Typography variant="h4" component="div" fontWeight="bold">
