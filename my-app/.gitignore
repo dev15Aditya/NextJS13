@@ -1,6 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+<<<<<<< HEAD
 
 .env.local
+=======
+.env
+>>>>>>> origin/main
 # dependencies
 /node_modules
 /.pnp
@@ -26,9 +30,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 # local env files
 .env
 
+=======
+>>>>>>> origin/main
 # vercel
 .vercel
 
