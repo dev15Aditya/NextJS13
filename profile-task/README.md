@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Profile Screen
 
-## Getting Started
+This project is a simple Next.js application that renders a "profile screen." The profile data is hardcoded in the `data.ts` file in JSON format.
+`The project uses Tailwind CSS for styling and Material-UI components.`
 
-First, run the development server:
+## Hosted Webpage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The application is hosted on Vercel. You can access it [here](https://next-js-13-gamma.vercel.app/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Profile Data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Profile data is stored in the data.ts file in JSON format. You can modify this file to update the profile information. It is located in /src/app
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I have made separed component folder and wrapped it in page.tsx, It helped me to make development easy and fast.
 
-## Learn More
+`components` folder has 3 component.
 
-To learn more about Next.js, take a look at the following resources:
+- Counter: Keeps track of number of post present
+- Post: This card component is used to render Posts
+- Profile: This is used to reder details of person whose profile data is coded in data.ts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The application is designed to be responsive and work seamlessly on various screen sizes.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+fi
