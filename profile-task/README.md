@@ -22,5 +22,3 @@ I have made separed component folder and wrapped it in page.tsx, It helped me to
 ### Responsive Design
 
 The application is designed to be responsive and work seamlessly on various screen sizes.
-
-fi
