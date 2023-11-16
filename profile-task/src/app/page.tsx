@@ -1,16 +1,27 @@
 import Post from '@/components/Post';
-import Image from 'next/image';
 import Profile from '../components/Profile';
 import data from './data';
 import Counter from '@/components/Counter';
 
 export default function Home() {
-  const count = data.length;
+  const count = data.posts.length;
   return (
     <div>
-      <Profile />
+      <Profile
+        name={data.name}
+        instaHandle={data.instaHandle}
+        profilePic={data.profilePic}
+        coverPic={data.coverPic}
+        followers={data.followers}
+        following={data.following}
+        title={data.title}
+        star={data.star}
+        liked={data.liked}
+        views={data.views}
+        loved={data.loved}
+      />
       <Counter count={count} />
-      {data.map((post) => {
+      {data.posts.map((post) => {
         return (
           <Post
             id={post.id}

@@ -25,14 +25,17 @@ const PostCard = (props: {
   };
 
   return (
-    <Card key={props.id} className="mx-3 lg:mx-16 mb-2">
+    <Card key={props.id} className="mx-2 lg:mx-8 mb-2">
       {/* Card Header */}
       <CardActions disableSpacing>
-        <Typography variant="h4" component="div" fontWeight="bold">
+        <Typography variant="h5" component="div" fontWeight="bold">
           {props.title}
         </Typography>
         <div style={{ marginLeft: 'auto' }}>
-          <IconButton aria-label="like" style={{ backgroundColor: '#edcc38' }}>
+          <IconButton
+            aria-label="like"
+            style={{ backgroundColor: '#edcc38', marginRight: '10px' }}
+          >
             <ThumbUpOffAltIcon />
           </IconButton>
         </div>
