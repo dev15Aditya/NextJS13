@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function NavItems() {
   return (
     <div className="flex flex-col relative">
-      <div className="flex items-center justify-between w-[90%] mx-auto md:mx-4 border border-gray-500 rounded-lg p-2 md:max-w-[300px] mt-2">
+      <div className="flex items-center justify-between w-[90%] mx-auto md:mx-4 border border-gray-500 rounded-lg p-2 md:max-w-[300px] mt-2 md:absolute md:top-[-40px] md:left-28">
         <input
           className="bg-transparent text-sm outline-none text-gray-500"
           placeholder="Try searching for Temerity..."

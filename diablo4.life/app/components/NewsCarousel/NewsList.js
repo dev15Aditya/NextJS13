@@ -1,17 +1,17 @@
-import Card from './Card';
-import data from './Data.json';
-
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-export default function CardList() {
+import NewsCard from './NewsCard';
+import data from './Data.json';
+
+export default function NewsList() {
   return (
     <>
       <div className="flex justify-between">
         <div className="flex items-center">
-          <h1 className="text-gray-200 text-lg">Diablo 4 Guides</h1>
+          <h1 className="text-gray-200">Diablo 4 Latest News</h1>
           <p className="text-gray-400 flex items-center ml-4 text-[12px] group">
             <span className="group-hover:underline transition duration-300">
-              View All Guides
+              View All News
             </span>
             <FaArrowRight className="text-gray-400 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" />
           </p>
@@ -25,7 +25,7 @@ export default function CardList() {
       </div>
       <div className="flex flex-nowrap overflow-x-auto select-none">
         {data.map((item) => (
-          <Card
+          <NewsCard
             key={item.id}
             url={item.url}
             title={item.title}

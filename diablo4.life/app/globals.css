@@ -5,6 +5,7 @@
 body {
   min-height: 100vh;
   background: #191920;
+  overflow-x: hidden;
 }
 
 /* styles/tailwind.css or your global stylesheet */

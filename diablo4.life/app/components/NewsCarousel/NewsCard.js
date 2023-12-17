@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Card({
+export default function NewsCard({
   url,
   title,
   heading,
@@ -8,8 +8,8 @@ export default function Card({
   updateDetails,
 }) {
   return (
-    <a href="#" className="block bg-transparent m-2 w-[350px]">
-      <div className="relative  h-[250px] w-[350px]">
+    <a href="#" className="block bg-transparent m-2 w-[330px]">
+      <div className="relative  h-[220px] w-[330px]">
         <Image
           layout="fill"
           objectFit="cover"
