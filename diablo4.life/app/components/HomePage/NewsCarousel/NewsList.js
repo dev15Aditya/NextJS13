@@ -6,7 +6,7 @@ import data from './Data.json';
 export default function NewsList() {
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between w-11/12 mx-auto">
         <div className="flex items-center">
           <h1 className="text-gray-200">Diablo 4 Latest News</h1>
           <p className="text-gray-400 flex items-center ml-4 text-[12px] group">
