@@ -14,8 +14,11 @@ export default function PollCard() {
   };
 
   return (
-    <div className="w-11/12 mx-auto">
-      <h1 id="demo-radio-buttons-group-label" className="text-gray-200">
+    <div className="my-5">
+      <h1
+        id="demo-radio-buttons-group-label"
+        className="text-gray-200 text-[20px]"
+      >
         Are you ready for the Abattoir of Zir
       </h1>
       <FormControl className="block">

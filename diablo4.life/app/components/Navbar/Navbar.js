@@ -12,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#252630] p-4 md:h-[100px]">
-      <div className="container mx-auto flex items-center justify-between flex-wrap md:relative">
+    <nav className="bg-[#252630] py-5 md:h-[110px]">
+      <div className="container w-[95%] mx-auto flex items-center justify-between flex-wrap md:relative">
         {/* Logo on the left */}
         <div className="text-white">
           <Image
@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* NavBar Items  */}
         <div
-          className={`lg:flex ${
+          className={`md:flex ${
             isMenuOpen ? 'flex' : 'hidden'
           } flex-col mt-4 lg:mt-0 w-full`}
         >

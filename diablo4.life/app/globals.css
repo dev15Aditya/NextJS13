@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
 body {
   min-height: 100vh;
   background: #191920;
@@ -25,4 +26,8 @@ body {
 .hamburger.expand {
   width: 30px;
   margin: 6px 0;
+}
+
+li:hover .hidden {
+  display: block;
 }
