@@ -46,6 +46,25 @@ export default function NavItems() {
           <a href="" className="block md:mb-2">
             Builds
           </a>
+          <div className="hidden absolute w-[120px] bg-[#393E4C] text-gray-300 left-0 top-100">
+            <ul className="list-none pl-3 border py-2 space-y-1">
+              <li className="my-1">
+                <a href="" className="block hover:text-gray-100">
+                  Helltide
+                </a>
+              </li>
+              <li className="my-1">
+                <a href="" className="block hover:text-gray-100">
+                  Legion Events
+                </a>
+              </li>
+              <li className="my-1">
+                <a href="" className="block hover:text-gray-100">
+                  World Bosses
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li className="p-3 md:hover:bg-[#393E4C]">
           <a href="" className="block md:mb-2">
