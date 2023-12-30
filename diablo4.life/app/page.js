@@ -1,6 +1,4 @@
-import Navbar from './components/Navbar/Navbar';
-import HomePage from './components/HomePage/layout';
-import Footer from './components/Footer/Footer';
+import HomePage from './HomePage/layout';
 
 export default function Home() {
   return (
@@ -10,9 +8,7 @@ export default function Home() {
         'font-weight': '400',
       }}
     >
-      <Navbar />
       <HomePage />
-      <Footer />
     </div>
   );
 }

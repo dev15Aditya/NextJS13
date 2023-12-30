@@ -1,8 +1,35 @@
 import { FiSearch } from 'react-icons/fi';
 import { FaDiscord } from 'react-icons/fa';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
+
+import './Navbar.css';
+
+const navItems = [
+  {
+    Tracker: ['Helltide', 'Legion Events', 'World Bosses'],
+    Builds: ['Commuinty Builds', 'Featured Builds', 'build Planner'],
+    Database: [
+      'Unique Loot Tables',
+      'Vampiric Powers',
+      'Endgame Boss Paths',
+      'Skills',
+      'Aspects',
+      'Uniques',
+      'Paragon Glyphs',
+      'Gear Affixes',
+      'Hidden Rares',
+    ],
+    Tools: ['Gambling Aspects', 'Target Farming Uniques', 'Nightmare Dungeons'],
+    Guides: ['Abattoir of Zir', 'Midwinter Blight', 'Secret Cow Level'],
+    'Tier Lists': ['Unique Dungeons', 'Unique Items', 'Vampiric Powers'],
+    Map: [],
+  },
+];
 
 export default function NavItems() {
+  const isMediumScreen = useMediaQuery({ minWidth: 768 });
+
   return (
     <div className="flex flex-col relative">
       <div className="flex items-center justify-between w-full mx-auto md:mx-4 border border-gray-500 rounded-lg p-2 md:max-w-[350px] mt-2 md:absolute md:top-[-40px] md:left-28">
@@ -16,87 +43,33 @@ export default function NavItems() {
         <FiSearch className="text-[#fdfdfd] text-xl" />
       </div>
       <ul className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center mt-2 md:pt-2">
-        <li className="p-3 md:hover:bg-[#393E4C] relative">
-          <a href="" className="block md:mb-2">
-            Tracker
-          </a>
-
-          <div className="hidden absolute w-[120px] bg-[#393E4C] text-gray-300 left-0 top-100">
-            <ul className="list-none pl-3 border py-2 space-y-1">
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  Helltide
-                </a>
-              </li>
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  Legion Events
-                </a>
-              </li>
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  World Bosses
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li className="p-3 md:hover:bg-[#393E4C]">
-          <a href="" className="block md:mb-2">
-            Builds
-          </a>
-          <div className="hidden absolute w-[120px] bg-[#393E4C] text-gray-300 left-0 top-100">
-            <ul className="list-none pl-3 border py-2 space-y-1">
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  Helltide
-                </a>
-              </li>
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  Legion Events
-                </a>
-              </li>
-              <li className="my-1">
-                <a href="" className="block hover:text-gray-100">
-                  World Bosses
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li className="p-3 md:hover:bg-[#393E4C]">
-          <a href="" className="block md:mb-2">
-            Database
-          </a>
-        </li>
-        <li className="p-3 md:hover:bg-[#393E4C]">
-          <a href="" className="block md:mb-2">
-            Tools
-          </a>
-        </li>
-        <li className="p-3 relative md:hover:bg-[#393E4C]">
-          <span className="text-[#952a2a] text-[10px] px-1 bg-transparent absolute top-0 left-10 md:right-0 rounded text-center">
-            new
-          </span>
-          <a href="" className="block md:mb-2">
-            Guides
-          </a>
-        </li>
-        <li className="p-3 md:hover:bg-[#393E4C]">
-          <a href="" className="block md:mb-2">
-            Tier Lists
-          </a>
-        </li>
-        <li className="p-3 md:hover:bg-[#393E4C]">
-          <a href="" className="block md:mb-2">
-            Map
-          </a>
-        </li>
-        <button className="md:mb-2 text-sm rounded-lg bg-[#952a2a] px-3 py-1 text-gray-200 ml-5 mt-3 md:mt-0 hover:brightness-150">
+        {Object.entries(navItems[0]).map(([category, subItems]) => (
+          <li key={category} className="p-3 relative">
+            <Link href="/tracker" className="block md:mb-2">
+              {category}
+            </Link>
+            {isMediumScreen && subItems.length > 0 && (
+              <div className="hidden md:absolute w-auto bg-[#393E4C] text-gray-300 left-0 top-100 z-50">
+                <ul className="list-none pl-3 pr-6 border py-2 space-y-1">
+                  {subItems.map((subItem, index) => (
+                    <li key={index} className="my-1 z-50 list-none">
+                      <Link
+                        href="/"
+                        className="block hover:text-gray-100"
+                        style={{ whiteSpace: 'nowrap' }}
+                      >
+                        {subItem}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </li>
+        ))}
+        {/* <button className="md:mb-2 text-sm rounded-lg bg-[#952a2a] px-3 py-1 text-gray-200 ml-5 mt-3 md:mt-0 hover:brightness-150">
           Build Planner
-        </button>
+        </button> */}
       </ul>
 
       {/* Login div  */}

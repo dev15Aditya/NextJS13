@@ -1,0 +1,21 @@
+.hamburger {
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.shrink {
+  width: 15px;
+  margin: 6px 7px;
+}
+
+.hamburger.expand {
+  width: 30px;
+  margin: 6px 0;
+}
+
+li:hover .hidden {
+  display: block;
+}

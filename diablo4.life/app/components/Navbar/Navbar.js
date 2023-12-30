@@ -3,6 +3,9 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import NavItems from './NavItems';
+import Link from 'next/link';
+
+import './Navbar.css';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,15 +18,17 @@ export default function Navbar() {
     <nav className="bg-[#252630] py-5 md:h-[110px]">
       <div className="container w-[95%] mx-auto flex items-center justify-between flex-wrap md:relative">
         {/* Logo on the left */}
-        <div className="text-white">
-          <Image
-            width={100}
-            height={100}
-            src="/logo.png"
-            alt="DIABOLO4.LIFE"
-            className="h-8"
-          />
-        </div>
+        <li className="text-white list-none">
+          <Link href="/">
+            <Image
+              width={100}
+              height={100}
+              src="/logo.png"
+              alt="DIABOLO4.LIFE"
+              className="h-8"
+            />
+          </Link>
+        </li>
 
         {/* Hamburger icon on the right (visible on mobile) */}
         <div className="lg:hidden">

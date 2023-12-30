@@ -3,7 +3,7 @@ import User from './User';
 
 export default function UserData() {
   return (
-    <div className="hidden md:block w-[35%]">
+    <div className="hidden md:block w-full">
       {/* Timer 1 */}
       <div className="text-gray-200 text-[.75rem] bg-[#393E4C] px-5 py-2 rounded-lg flex relative text-sm justify-between">
         <p>World Boss</p>
