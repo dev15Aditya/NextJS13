@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         <div className="md:flex w-[95%] mx-auto mt-3">
-          <div className="md:w-[80%] mr-2">{children}</div>
+          <div className="md:w-[80%] mr-2  mt-[7rem]">{children}</div>
           <div className="md:w-[20%]">
             <UserData />
           </div>

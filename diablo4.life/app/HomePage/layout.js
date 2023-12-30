@@ -6,7 +6,7 @@ import LinkCard from './QuickLinks/LinkCard';
 
 export default function HomePage() {
   return (
-    <div className="w-full mt-[7rem]">
+    <div className="w-full">
       <HeroContainer />
       <LinkCard />
       <CardList />
