@@ -7,28 +7,63 @@ import './Navbar.css';
 
 const navItems = [
   {
-    Tracker: ['Helltide', 'Legion Events', 'World Bosses'],
-    Builds: ['Commuinty Builds', 'Featured Builds', 'build Planner'],
-    Database: [
-      'Unique Loot Tables',
-      'Vampiric Powers',
-      'Endgame Boss Paths',
-      'Skills',
-      'Aspects',
-      'Uniques',
-      'Paragon Glyphs',
-      'Gear Affixes',
-      'Hidden Rares',
-    ],
-    Tools: ['Gambling Aspects', 'Target Farming Uniques', 'Nightmare Dungeons'],
-    Guides: ['Abattoir of Zir', 'Midwinter Blight', 'Secret Cow Level'],
-    'Tier Lists': ['Unique Dungeons', 'Unique Items', 'Vampiric Powers'],
+    Tracker: {
+      nav: [
+        { name: 'Helltide', link: '/tracker/helltide' },
+        { name: 'Legion Events', link: '/tracker/legion-events' },
+        { name: 'World Bosses', link: '/tracker/world-bosses' },
+      ],
+      link: '/tracker/overview',
+    },
+    Builds: {
+      nav: [
+        { name: 'Commuinty Builds', link: '/builds/community' },
+        { name: 'Featured Builds', link: '/builds/featured' },
+        { name: 'Build Planner', link: '/builds/planner' },
+      ],
+      link: '/builds',
+    },
+    Database: {
+      nav: [
+        { name: 'Unique Loot Tables', link: '/database/loot-tables' },
+        { name: 'Vampiric Powers', link: '/database/vampiric-powers' },
+        { name: 'Endgame Boss Paths', link: '/database/boss-paths' },
+        // ... other database items
+      ],
+      link: '/database',
+    },
+    Tools: {
+      nav: [
+        { name: 'Gambling Aspects', link: '/tools/gambling' },
+        { name: 'Target Farming Uniques', link: '/tools/farming' },
+        { name: 'Nightmare Dungeons', link: '/tools/nightmare-dungeons' },
+      ],
+      link: '/tools',
+    },
+    Guides: {
+      nav: [
+        { name: 'Abattoir of Zir', link: '/guides/abattoir' },
+        { name: 'Midwinter Blight', link: '/guides/midwinter' },
+        { name: 'Secret Cow Level', link: '/guides/cow-level' },
+      ],
+      link: '/guides',
+    },
+    'Tier Lists': {
+      nav: [
+        { name: 'Unique Dungeons', link: '/tier-lists/dungeons' },
+        { name: 'Unique Items', link: '/tier-lists/items' },
+        { name: 'Vampiric Powers', link: '/tier-lists/powers' },
+      ],
+      link: '/tier-lists',
+    },
     Map: [],
   },
 ];
 
 export default function NavItems() {
   const isMediumScreen = useMediaQuery({ minWidth: 768 });
+
+  const categories = Object.entries(navItems[0]);
 
   return (
     <div className="flex flex-col relative">
@@ -43,23 +78,36 @@ export default function NavItems() {
         <FiSearch className="text-[#fdfdfd] text-xl" />
       </div>
       <ul className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center mt-2 md:pt-2">
-        {Object.entries(navItems[0]).map(([category, subItems]) => (
+        {categories.map(([category, data]) => (
           <li key={category} className="p-3 relative">
-            <Link href="/tracker" className="block md:mb-2">
-              {category}
-            </Link>
-            {isMediumScreen && subItems.length > 0 && (
+            {data.link ? (
+              <Link href={data.link} className="block md:mb-2">
+                {category}
+              </Link>
+            ) : (
+              <span className="block md:mb-2">{category}</span>
+            )}
+            {isMediumScreen && data.nav && data.nav.length > 0 && (
               <div className="hidden md:absolute w-auto bg-[#393E4C] text-gray-300 left-0 top-100 z-50">
                 <ul className="list-none pl-3 pr-6 border py-2 space-y-1">
-                  {subItems.map((subItem, index) => (
+                  {data.nav.map((subItem, index) => (
                     <li key={index} className="my-1 z-50 list-none">
-                      <Link
-                        href="/"
-                        className="block hover:text-gray-100"
-                        style={{ whiteSpace: 'nowrap' }}
-                      >
-                        {subItem}
-                      </Link>
+                      {subItem.link ? (
+                        <Link
+                          href={subItem.link}
+                          className="block hover:text-gray-100"
+                          style={{ whiteSpace: 'nowrap' }}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ) : (
+                        <span
+                          className="block hover:text-gray-100"
+                          style={{ whiteSpace: 'nowrap' }}
+                        >
+                          {subItem.name}
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -67,12 +115,8 @@ export default function NavItems() {
             )}
           </li>
         ))}
-        {/* <button className="md:mb-2 text-sm rounded-lg bg-[#952a2a] px-3 py-1 text-gray-200 ml-5 mt-3 md:mt-0 hover:brightness-150">
-          Build Planner
-        </button> */}
       </ul>
-
-      {/* Login div  */}
+      ;{/* Login div  */}
       <div className="flex items-center pr-4 ml-auto absolute bottom-0 right-5 md:top-[-50px]">
         <FaDiscord className="bg-[#5864F2] text-[#F2EFED] rounded-full h-7 w-7 p-1" />
         <Link
