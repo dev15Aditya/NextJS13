@@ -1,7 +1,7 @@
 import { FiSearch } from 'react-icons/fi';
 import { FaDiscord } from 'react-icons/fa';
 import Link from 'next/link';
-import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 import './Navbar.css';
 
@@ -56,12 +56,16 @@ const navItems = [
       ],
       link: '/tier-lists',
     },
-    Map: [],
+    Map: {},
   },
 ];
 
 export default function NavItems() {
-  const isMediumScreen = useMediaQuery({ minWidth: 768 });
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    setIsMediumScreen(window.innerWidth >= 768);
+  }, [isMediumScreen]);
 
   const categories = Object.entries(navItems[0]);
 
@@ -77,9 +81,9 @@ export default function NavItems() {
         />
         <FiSearch className="text-[#fdfdfd] text-xl" />
       </div>
-      <ul className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center mt-2 md:pt-2">
+      <div className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center mt-2 md:pt-2">
         {categories.map(([category, data]) => (
-          <li key={category} className="p-3 relative">
+          <div key={category} className="navli p-3 relative">
             {data.link ? (
               <Link href={data.link} className="block md:mb-2">
                 {category}
@@ -89,9 +93,9 @@ export default function NavItems() {
             )}
             {isMediumScreen && data.nav && data.nav.length > 0 && (
               <div className="hidden md:absolute w-auto bg-[#393E4C] text-gray-300 left-0 top-100 z-50">
-                <ul className="list-none pl-3 pr-6 border py-2 space-y-1">
+                <div className="list-none pl-3 pr-6 border py-2 space-y-1">
                   {data.nav.map((subItem, index) => (
-                    <li key={index} className="my-1 z-50 list-none">
+                    <div key={index} className="my-1 z-50 list-none">
                       {subItem.link ? (
                         <Link
                           href={subItem.link}
@@ -108,15 +112,15 @@ export default function NavItems() {
                           {subItem.name}
                         </span>
                       )}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
-          </li>
+          </div>
         ))}
-      </ul>
-      ;{/* Login div  */}
+      </div>
+      {/* Login div  */}
       <div className="flex items-center pr-4 ml-auto absolute bottom-0 right-5 md:top-[-50px]">
         <FaDiscord className="bg-[#5864F2] text-[#F2EFED] rounded-full h-7 w-7 p-1" />
         <Link

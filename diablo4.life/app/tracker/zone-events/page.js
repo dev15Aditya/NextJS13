@@ -1,15 +1,9 @@
-import { Square } from '@mui/icons-material';
 import Card from '../components/Card';
 
-export default function Overview() {
+export default function LegionEvents() {
   return (
-    <div>
-      <div className="md:flex justify-between">
-        <Card />
-        <Card />
-        <Card />
-      </div>
-      <div className="text-[#bcbcbc] w-full mx-auto mt-5">
+    <div className="md:flex justify-between">
+      <div className="text-[#bcbcbc] mt-5">
         <h1>
           A interactive map will appear when there is an active Helltide
           showing:
@@ -34,6 +28,7 @@ export default function Overview() {
           </li>
         </ul>
       </div>
+      <Card />
     </div>
   );
 }

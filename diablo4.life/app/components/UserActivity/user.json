@@ -1,42 +1,82 @@
 [
   {
     "id": 1,
-    "user": "Beltrah#2290"
+    "user": "Beltrah#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 2,
-    "user": "Prowner"
+    "user": "Prowner",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:08:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 3,
-    "user": "Darel#2290"
+    "user": "Darel#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:20:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 4,
-    "user": "server#2290"
+    "user": "server#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:50:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 5,
-    "user": "ming#2290"
+    "user": "ming#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "yesterday"
   },
   {
     "id": 6,
-    "user": "holy#1287"
+    "user": "holy#1287",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:40:00 AM",
+    "last-active": "3 weeks ago"
   },
   {
     "id": 7,
-    "user": "david.fp#0"
+    "user": "david.fp#0",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 8,
-    "user": "Beltrah#2290"
+    "user": "Beltrah#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "7 hours ago"
   },
   {
     "id": 9,
-    "user": "Beltrah#2290"
+    "user": "Beltrah#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "2 days ago"
   },
   {
     "id": 10,
-    "user": "Beltrah#2290"
+    "user": "Beltrah#2290",
+    "area": "Scosglen",
+    "status": "Online",
+    "endTime": "9:00:00 AM",
+    "last-active": "1 week ago"
   }
 ]

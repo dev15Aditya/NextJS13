@@ -16,6 +16,6 @@
   margin: 6px 0;
 }
 
-li:hover .hidden {
+.navli:hover .hidden {
   display: block;
 }

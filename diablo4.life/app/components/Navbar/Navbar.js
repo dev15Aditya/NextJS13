@@ -15,10 +15,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#252630] py-5 md:h-[110px]">
+    <div className="bg-[#252630] py-5 md:h-[110px]">
       <div className="container w-[95%] mx-auto flex items-center justify-between flex-wrap md:relative">
         {/* Logo on the left */}
-        <li className="text-white list-none">
+        <div className="text-white list-none">
           <Link href="/">
             <Image
               width={100}
@@ -28,7 +28,7 @@ export default function Navbar() {
               className="h-8"
             />
           </Link>
-        </li>
+        </div>
 
         {/* Hamburger icon on the right (visible on mobile) */}
         <div className="lg:hidden">
@@ -52,6 +52,6 @@ export default function Navbar() {
           <NavItems />
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
