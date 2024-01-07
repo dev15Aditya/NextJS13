@@ -51,7 +51,7 @@ const navItems = [
     'Tier Lists': {
       nav: [
         { name: 'Unique Dungeons', link: '/tier-lists/nightmare-dungeon' },
-        { name: 'Unique Items', link: '/tier-lists/items' },
+        { name: 'Unique Items', link: '/tier-lists/unique-tier-list' },
         { name: 'Vampiric Powers', link: '/tier-lists/powers' },
       ],
       link: '/tier-lists',
