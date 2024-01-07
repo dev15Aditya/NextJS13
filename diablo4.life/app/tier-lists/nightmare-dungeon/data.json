@@ -1,0 +1,56 @@
+[
+  {
+    "id": "S",
+    "text": "S",
+    "children": [
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Ffractured_peaks.png&w=64&q=75",
+        "name": "Sanguine Chapel",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      },
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fkehjistan.png&w=64&q=75",
+        "name": "Deserted Underpass",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      },
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fscosglen.png&w=64&q=75",
+        "name": "Sirocco Caverns",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      }
+    ]
+  },
+  {
+    "id": "A",
+    "text": "A",
+    "children": [
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fdry_steppes.png&w=32&q=75",
+        "name": "Sanguine Chapel",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      },
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fscosglen.png&w=32&q=75",
+        "name": "Deserted Underpass",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      },
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fhawezar.png&w=32&q=75",
+        "name": "Sirocco Caverns",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      },
+      {
+        "icon": "https://diablo4.life/_next/image?url=%2Fregions%2Fhawezar.png&w=32&q=75",
+        "name": "Sirocco Caverns",
+        "Description": "A snowed in abandoned Zakarum church invaded by vampires.",
+        "tag": "Fractured Peaks"
+      }
+    ]
+  }
+]
