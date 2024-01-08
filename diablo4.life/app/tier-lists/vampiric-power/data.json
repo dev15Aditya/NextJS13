@@ -4,7 +4,7 @@
     "text": "S",
     "children": [
       {
-        "icon": "https://diablo4.life/_next/image?url=%2Funiques%2Fharlequin_crest.png&w=64&q=75",
+        "icon": "https://diablo4.life/_next/image?url=%2FvampiricPowers%2Fprey_on_the_weak.png&w=64&q=75",
         "name": "Sanguine Chapel",
         "label": ["Helm", "Ultra rare"],
         "feature1": [
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "icon": "https://diablo4.life/_next/image?url=%2Funiques%2Fharlequin_crest.png&w=64&q=75",
+        "icon": "https://diablo4.life/_next/image?url=%2FvampiricPowers%2Fcoven's_fangs.png&w=64&q=75",
         "name": "Tal Rasha's Iridescent Loop",
         "label": ["Ring"],
         "feature1": [
@@ -52,30 +52,7 @@
         }
       },
       {
-        "icon": "https://diablo4.life/_next/image?url=%2Funiques%2Fharlequin_crest.png&w=64&q=75",
-        "name": "Sanguine Chapel",
-        "label": ["Helm", "Ultra rare"],
-        "feature1": [
-          "+0.455 Maximum Life",
-          "7% Cooldown Reduction",
-          "12% Resource Generation",
-          "28 All Stats"
-        ],
-        "feature2": [],
-        "Description": "Gains 20% Damage Reduction. In addition, gain +4 Ranks to all Skills",
-        "tags": {
-          "imageUrl": [
-            "https://diablo4.life/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbarbarian.ac87de19.png&w=128&q=75",
-            "https://diablo4.life/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdruid.6cad31fa.png&w=64&q=75",
-            "https://diablo4.life/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fnecromancer.f846fdbf.png&w=128&q=75",
-            "https://diablo4.life/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frogue.a7e3d2be.png&w=128&q=75"
-          ],
-          "level": "Monster Lvl 85",
-          "worldTier": "World Tier 4"
-        }
-      },
-      {
-        "icon": "https://diablo4.life/_next/image?url=%2Funiques%2Fharlequin_crest.png&w=64&q=75",
+        "icon": "https://diablo4.life/_next/image?url=%2FvampiricPowers%2Fbathe_in_blood.png&w=64&q=75",
         "name": "Sanguine Chapel",
         "label": ["Helm", "Ultra rare"],
         "feature1": [

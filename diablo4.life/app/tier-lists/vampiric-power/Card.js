@@ -14,7 +14,7 @@ export default function Card({ data }) {
 
   return (
     <div
-      className="flex w-full justify-between my-2"
+      className="flex w-full justify-between my-2 shadow-md"
       onMouseMove={handleMouseMove}
     >
       <div className="text-[4rem] bg-[#5a657a] rounded-l-lg w-[20%] md:w-[10%] flex items-center justify-center text-[#bcbcbc]">
@@ -30,7 +30,7 @@ export default function Card({ data }) {
           >
             <Image height={28} width={28} src={child.icon} alt={child.name} />
             <div>
-              <h3 className="text-[#f0af5f] border-dotted border-b-2 border-[#f0af5f]">
+              <h3 className="text-[#bcbcbc] border-dotted border-b-2 border-[#bcbcbc]">
                 {child.name}
               </h3>
               {hoveredChild === index && (
