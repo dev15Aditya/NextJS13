@@ -9,8 +9,8 @@ const navItems = [
   {
     Tracker: {
       nav: [
-        { name: 'Helltide', link: '/tracker/helltide' },
-        { name: 'Legion Events', link: '/tracker/legion-events' },
+        { name: 'Helltide', link: '/tracker/helltides' },
+        { name: 'Legion Events', link: '/tracker/zone-events' },
         { name: 'World Bosses', link: '/tracker/world-bosses' },
       ],
       link: '/tracker/overview',
@@ -34,11 +34,14 @@ const navItems = [
     },
     Tools: {
       nav: [
-        { name: 'Gambling Aspects', link: '/tools/gambling' },
-        { name: 'Target Farming Uniques', link: '/tools/farming' },
+        { name: 'Gambling Aspects', link: '/tools/gambling-aspects' },
+        {
+          name: 'Target Farming Uniques',
+          link: '/tools/unique-target-farming',
+        },
         { name: 'Nightmare Dungeons', link: '/tools/nightmare-dungeons' },
       ],
-      link: '/tools',
+      link: '/tools/gambling-aspects',
     },
     Guides: {
       nav: [
@@ -81,18 +84,21 @@ export default function NavItems() {
         />
         <FiSearch className="text-[#fdfdfd] text-xl" />
       </div>
-      <div className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center mt-2 md:pt-2">
+      <div className="text-gray-300 text-left w-full mx-auto lg:w-full md:flex md:items-center md:pt-2">
         {categories.map(([category, data]) => (
           <div key={category} className="navli p-3 relative">
             {data.link ? (
-              <Link href={data.link} className="block md:mb-2">
+              <Link
+                href={data.link}
+                className="block md:mb-2 md:hover:bg-[#393E4C] md:px-4 md:py-2"
+              >
                 {category}
               </Link>
             ) : (
               <span className="block md:mb-2">{category}</span>
             )}
             {isMediumScreen && data.nav && data.nav.length > 0 && (
-              <div className="hidden md:absolute w-auto bg-[#393E4C] text-gray-300 left-0 top-100 z-50">
+              <div className="hidden md:absolute w-auto bg-[#393E4C] text-gray-300 left-3 top-[50px] z-50">
                 <div className="list-none pl-3 pr-6 border py-2 space-y-1">
                   {data.nav.map((subItem, index) => (
                     <div key={index} className="my-1 z-50 list-none">
