@@ -21,10 +21,13 @@ export default function Page() {
                 height={40}
                 width={40}
                 src="https://diablo4.life/_next/image?url=%2Fglyphs%2FDexterity.png&w=96&q=5"
-                alt=""
+                alt="image"
               />
               <div className="flex flex-col ml-5">
-                <label className="text-[0.8em] text-[#bcbcbc] mb-2" for="num">
+                <label
+                  className="text-[0.8em] text-[#bcbcbc] mb-2"
+                  htmlFor="num"
+                >
                   Current glyph level
                 </label>
 
@@ -49,7 +52,10 @@ export default function Page() {
                 alt=""
               />
               <div className="flex flex-col ml-5">
-                <label className="text-[0.8em] text-[#bcbcbc] mb-2" for="cars">
+                <label
+                  className="text-[0.8em] text-[#bcbcbc] mb-2"
+                  htmlFor="num"
+                >
                   Nightmare dungeon level
                 </label>
 
