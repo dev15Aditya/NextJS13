@@ -78,8 +78,8 @@ export default function Page() {
           </h1>
 
           <h1 className="py-4 text-[1em] text-[#bcbcbc]">
-            At <span className="text-[#9090fc]">level 15</span> a Glyph's range
-            in the paragon board is increased by one.{' '}
+            At <span className="text-[#9090fc]">level 15</span> a Glyph&apos;s
+            range in the paragon board is increased by one.{' '}
           </h1>
 
           <h1 className="py-4 text-[1em] text-[#bcbcbc]">
