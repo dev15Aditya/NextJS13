@@ -2,4 +2,4 @@
 next-js-13-gamma.vercel.app
 
 ## Chatbot url: `https://next-js-13-hxxj.vercel.app/`
-## Diabolo for life url: ``
+## Diabolo for life url: `https://next-js-13-mocha.vercel.app/`
