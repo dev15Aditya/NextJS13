@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [theInput, setTheInput] = useState('');
@@ -34,7 +34,7 @@ export default function Home() {
 
     const { output } = data;
 
-    console.log('Got a response...', output.content);
+    //console.log('Got a response...', output.content);
 
     setMessages((prev) => [...prev, output]);
 
@@ -48,11 +48,17 @@ export default function Home() {
     }
   };
 
+  // new chat should hide old chat should scroll up to show new chat
+  useEffect(() => {
+    const chat = document.querySelector('.h-full');
+    chat?.scrollTo(0, chat.scrollHeight);
+  }, [messages]);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between px-24 py-5">
       <h1 className="text-5xl font-sans">ChatBot🤖</h1>
 
-      <div className="flex  h-[25rem] w-[40rem] flex-col items-center bg-gray-600 rounded-xl">
+      <div className="flex  h-[25rem] w-[35rem] flex-col items-center bg-gray-600 rounded-sm">
         <div className=" h-full flex flex-col gap-2 overflow-y-auto py-8 px-3 w-full">
           {messages.map((e) => {
             return (
@@ -82,7 +88,7 @@ export default function Home() {
             value={theInput}
             onChange={(event) => setTheInput(event.target.value)}
             className="w-[85%] h-10 px-3 py-2
-          resize-none overflow-y-auto text-black bg-gray-300 rounded-l outline-none"
+            resize-none overflow-y-auto text-black bg-gray-300 rounded-l outline-none"
             onKeyDown={Submit}
           />
           <button
