@@ -44,22 +44,22 @@ export default function Home() {
     });
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-2 md:p-5">
       <Toaster />
-      <h1 className="text-xl font-bold mb-8 text-center">
-        Upload a pdf file, they ask questions related to the content of the PDF
+      <h1 className="text-xl font-mono mb-8 mt-5 text-center max-w-[320px]  ">
+        Chatbot that can intelligently engage with any PDF
       </h1>
       <div
         {...getRootProps({
           className:
-            'dropzone bg-gray-900 border border-gray-800 p-10 rounded-md hover:bg-gray-800 transition-colors duration-200 ease-in-out cursor-pointer',
+            'dropzone bg-gray-900 border border-gray-800 p-5 rounded-md hover:bg-gray-800 transition-colors duration-200 ease-in-out cursor-pointer',
         })}
       >
         <input {...getInputProps()} />
         <p>Upload a PDF to add new data</p>
       </div>
 
-      <div className="mx-auto w-full items-center max-w-md py-24 flex flex-col stretch">
+      <div className="mx-auto w-full items-center max-w-md py-10 flex flex-col stretch">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             className=" w-full max-w-md text-black border border-gray-300 rounded shadow-xl p-2"
@@ -78,8 +78,9 @@ export default function Home() {
             Submit
           </button>
 
-          <p className="text-center">
-            Completion result: {completion === '' ? 'Thinking...' : completion}
+          <p className="text-left">
+            <strong>Completion result</strong> :{' '}
+            {completion === '' ? 'Thinking...' : completion}
           </p>
         </form>
       </div>
