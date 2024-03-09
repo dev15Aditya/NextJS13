@@ -24,14 +24,14 @@ Build a chatbot that can interact with any PDF file!
    `git clone https://github.com/dev15Aditya/NextJS13`
 
 2. **Install Dependencies:**
-   cd pdf-chatbot
-   npm install
+   -cd pdf-chatbot
+   -npm install
 
 3. **Create Environment Variables:**
    Create a `.env.local` file in the root directory and add the following variables:
-   PINECONE_API_KEY="Your Pinecone API Key"
-   PINECONE_INDEX_NAME="Your Pinecone Index Name"
-   OPENAI_API_KEY="Your OpenAI API Key"
+   -PINECONE_API_KEY="Your Pinecone API Key"
+   -PINECONE_INDEX_NAME="Your Pinecone Index Name"
+   -OPENAI_API_KEY="Your OpenAI API Key"
 
 4. **Signup for Pinecone:**
 
