@@ -63,7 +63,7 @@ export default function Navbar() {
           <ul className="flex flex-col mt-5 lg:mt-0 lg:flex-row lg:items-center lg:space-x-5 lg:ml-auto">
             <li>
               <Link
-                href="/feature"
+                href="/pages/feature"
                 className="block py-2 px-3 text-white bg-blue-700 rounded dark:bg-blue-600"
                 aria-current="page"
               >
@@ -88,7 +88,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/pages/login"
                 className="block py-2 px-3 text-gray-900 rounded  dark:text-gray-400 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
               >
                 Login
