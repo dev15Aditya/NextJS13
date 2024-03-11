@@ -1,4 +1,20 @@
+'use client';
+
+import { signIn, signOut, useSession } from 'next-auth/react';
+
 export default function Login() {
+  const { data: session } = useSession();
+
+  if (session && session.user) {
+    return (
+      <div className="flex gap-4 ml-auto">
+        <p className="text-sky-600">{session.user.name}</p>
+        <button onClick={() => signOut()} className="text-red-600">
+          Sign Out
+        </button>
+      </div>
+    );
+  }
   return (
     <div className="max-h-fit flex justify-center text-white my-12">
       <div className="max-w-md w-full p-8 bg-gray-800 rounded-lg shadow-lg border border-gray-500 transition-colors hover:border-gray-300">
@@ -40,6 +56,10 @@ export default function Login() {
           </a>
         </p>
       </div>
+
+      <button onClick={() => signIn()} className="text-green-600 ml-auto">
+        Sign In
+      </button>
     </div>
   );
 }
