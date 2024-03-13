@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import SigninButton from './SigninButton';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -87,12 +88,13 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
+              {/* <Link
                 href="/pages/login"
                 className="block py-2 px-3 text-gray-900 rounded  dark:text-gray-400 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
               >
                 Login
-              </Link>
+              </Link> */}
+              <SigninButton />
             </li>
           </ul>
         </div>
