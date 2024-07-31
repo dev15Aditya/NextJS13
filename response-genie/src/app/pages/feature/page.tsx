@@ -1,4 +1,16 @@
+'use client';
+import { useEffect } from 'react';
+
 export default function Home() {
+  useEffect(() => {
+    async function fetchEmails() {
+      const response = await fetch('/api/email');
+      const messages = await response.json();
+      console.log('Emails: ', messages);
+    }
+
+    fetchEmails();
+  }, []);
   return (
     <section className="bg-transparent text-white py-12">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-28">

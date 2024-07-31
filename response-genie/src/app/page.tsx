@@ -8,9 +8,6 @@ import { getServerSession } from 'next-auth';
 export default function Home() {
   const { data: session } = useSession();
 
-  console.log(session);
-  // const [emails, setEmails] = useState([]);
-
   return (
     <main className="flex h-[84vh] flex-col items-center justify-center">
       <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg backdrop:">
